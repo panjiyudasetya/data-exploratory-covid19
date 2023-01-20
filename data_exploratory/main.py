@@ -21,6 +21,8 @@ class DataExploratory:
         dataframe = self._load_data()
         dataframe = self._clean_data(dataframe)
 
+        self._get_pie_insight('current_status', dataframe, "Case of Infected COVID-19")
+
     def _get_pie_insight(self, column_name: str, dataframe:DataFrame, title: str) -> None:
         """
         Get insight of the specific `column_name` in the given `dataframe`
