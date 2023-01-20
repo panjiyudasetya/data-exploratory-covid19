@@ -13,6 +13,7 @@ To run the project, you need to:
 2. I want to see the case of demographic COVID-19.
 3. I want to see how many patients were hospitalized when COVID-19 occurred.
 4. I want to see how many patients admitted to an ICU when COVID-19 occurred.
+5. I want to see how many patients died due to COVID-19.
 
 ## Answers
 1. Here is the comparison between a person that is positive for COVID-19 and a person that probably infected by COVID-19.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Infected%20COVID-19.png"/>
