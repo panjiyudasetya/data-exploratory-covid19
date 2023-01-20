@@ -10,6 +10,7 @@ To run the project, you need to:
 
 ## Questions
 1. I want to see the comparison case between a person that is positive for COVID-19 and a person that probably infected by COVID-19.
+2. I want to see the case of demographic COVID-19.
 
 ## Answers
 1. Here is the comparison between a person that is positive for COVID-19 and a person that probably infected by COVID-19.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Infected%20COVID-19.png"/>
