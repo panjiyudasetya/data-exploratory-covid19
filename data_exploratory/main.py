@@ -1,7 +1,8 @@
 import logging
+import matplotlib.pyplot as plt
 import pandas as pd
 
-from os import path
+from os import path, makedirs
 from pandas import DataFrame
 from zipfile import ZipFile
 
@@ -19,6 +20,31 @@ class DataExploratory:
         """
         dataframe = self._load_data()
         dataframe = self._clean_data(dataframe)
+
+    def _get_pie_insight(self, column_name: str, dataframe:DataFrame, title: str) -> None:
+        """
+        Get insight of the specific `column_name` in the given `dataframe`
+        as the Pie Chart with a specific `title`.
+
+        The method will also saves the generated Pie Chart
+        into the output directory.
+        """
+        # Configures mathplot library
+        plt.title(title, fontsize=18)
+
+        # Converts the value counts of that `column_name` into Pie Chart
+        pie_plot = dataframe[column_name].value_counts().plot.pie(autopct="%1.1f%%")
+        pie_plot.yaxis.set_visible(False)
+
+        # Create output directory if it doesn't exists
+        base_path = path.abspath(path.dirname(__name__))
+        outputs_path = f'{base_path}/outputs'
+
+        if not path.exists(outputs_path):
+            makedirs(outputs_path)
+
+        # Saves the plot as PNG files.
+        plt.savefig(f'{outputs_path}/{title}.png', bbox_inches='tight')
 
     def _clean_data(self, dataframe: DataFrame) -> DataFrame:
         """
