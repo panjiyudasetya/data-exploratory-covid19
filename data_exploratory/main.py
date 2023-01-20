@@ -21,7 +21,11 @@ class DataExploratory:
         dataframe = self._load_data()
         dataframe = self._clean_data(dataframe)
 
+        logger.info('Generating Pie Chart about the Case of Infected COVID-19...')
         self._get_pie_insight('current_status', dataframe, "Case of Infected COVID-19")
+
+        logger.info('Generating Pie Chart about the Case of Demographic COVID-19...')
+        self._get_pie_insight('race_and_ethnicity', dataframe, "Case of Demographic COVID-19")
 
     def _get_pie_insight(self, column_name: str, dataframe:DataFrame, title: str) -> None:
         """
@@ -45,8 +49,11 @@ class DataExploratory:
         if not path.exists(outputs_path):
             makedirs(outputs_path)
 
-        # Saves the plot as PNG files.
+        # Saves the plot as PNG file
         plt.savefig(f'{outputs_path}/{title}.png', bbox_inches='tight')
+
+        # Clear the current figure
+        plt.close()
 
     def _clean_data(self, dataframe: DataFrame) -> DataFrame:
         """
