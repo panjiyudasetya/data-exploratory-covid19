@@ -22,3 +22,4 @@ To run the project, you need to:
 3. Here is the hospitalized patient when COVID-19 occurred.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Hospitalized%20Patient.png"/>
 4. Here is the patient who was admitted to an ICU when COVID-19 occurred.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Patient%20Admitted%20to%20an%20ICU.png"/>
 5. Here is the patient who died due to COVID-19.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Death%20due%20to%20COVID-19.png"/>
+6. Here is the patient who have underlying medical conditions/risk behaviors.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Underlying%20Medical%20Conditions%20or%20Risk%20Behavior.png"/>
