@@ -18,8 +18,36 @@ class DataExploratory:
         Runs the COVID-19 data exploratory.
         """
         dataframe = self._load_data()
+        dataframe = self._clean_data(dataframe)
 
-        # TODO: Clean that `dataframe`
+    def _clean_data(self, dataframe: DataFrame) -> DataFrame:
+        """
+        Cleans the COVID-19 `dataframe` and returns the clean one.
+        """
+        logger.info('Describing the COVID-19 dataframe...')
+        logger.info(f'\n{dataframe.describe().T}\n')
+        logger.info(f'Pair of rows and columns before cleaning {dataframe.shape}\n')
+
+        logger.info('Cleaning null values...')
+        # Based on the table description, we found that the table
+        # has too many null values on the `pos_spec_dt` and `onset_dt` columns.
+        # From 8405079 rows of data, we could see:
+        # 1. The values of the `pos_spec_dt` column (approximately) 75% are null
+        # 2. The values of the `onset_dt` column (approximately) 50% are null
+        # Therefore, it's much better to ignore them.
+        dataframe = dataframe.drop(
+            ['pos_spec_dt','onset_dt'],
+            axis=1  # 1 for dropping an entire column
+        )
+
+        # Removes the other null values across the columns
+        dataframe = dataframe.dropna()
+
+        logger.info('Describing the COVID-19 dataframe that has been cleaned...')
+        logger.info(f'\n{dataframe.describe().T}\n')
+        logger.info(f'Pair of rows and columns after cleaning {dataframe.shape}\n')
+
+        return dataframe
 
     def _load_data(self) -> DataFrame:
         """
