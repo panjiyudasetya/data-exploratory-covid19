@@ -16,6 +16,7 @@ To run the project, you need to:
 5. I want to see how many patients died due to COVID-19.
 6. I want to see how many patients have underlying medical conditions/risk behaviors.
 7. I want to see the comparison case between a person that is positive for COVID-19 and a person that probably infected by COVID-19 by their gender.
+8. I want to see how many patients died due to COVID-19 with underlying medical conditions/risk behaviors.
 
 ## Answers
 1. Here is the comparison between a person that is positive for COVID-19 and a person that probably infected by COVID-19.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Infected%20COVID-19.png"/>
