@@ -1,6 +1,7 @@
 import logging
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 from os import path, makedirs
 from pandas import DataFrame
@@ -53,6 +54,40 @@ class DataExploratory:
         # Converts the value counts of that `column_name` into Pie Chart
         pie_plot = dataframe[column_name].value_counts().plot.pie(autopct="%1.1f%%")
         pie_plot.yaxis.set_visible(False)
+
+        # Create output directory if it doesn't exists
+        base_path = path.abspath(path.dirname(__name__))
+        outputs_path = f'{base_path}/outputs'
+
+        if not path.exists(outputs_path):
+            makedirs(outputs_path)
+
+        # Saves the plot as PNG file
+        plt.savefig(f'{outputs_path}/{title}.png', bbox_inches='tight')
+
+        # Clear the current figure
+        plt.close()
+
+    def _get_bar_insight(
+        self,
+        column_name: str,
+        comparison: str,
+        dataframe:DataFrame,
+        title: str) -> None:
+        """
+        Get insight of the specific `column_name` with respect to that `comparison` column
+        in the given `dataframe` as the Bar Chart and put some `title` on it.
+
+        The method will also saves the generated Bar Chart
+        into the output directory.
+        """
+        # Configures mathplot library
+        plt.title(title, fontsize=18, pad=25)
+
+        # Converts the value counts of that `column_name` with respect
+        # to that `comparison` column
+        sns.set_theme(style="whitegrid")
+        sns.countplot(data=dataframe, x=column_name, hue=comparison)
 
         # Create output directory if it doesn't exists
         base_path = path.abspath(path.dirname(__name__))
