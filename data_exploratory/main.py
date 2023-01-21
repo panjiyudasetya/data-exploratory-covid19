@@ -60,6 +60,13 @@ class DataExploratory:
             dataframe,
             "Case of Death due to COVID-19\nwith underlying medical conditions or risk behavior")
 
+        logger.info("Generating Bar Chart about the Case of Infected COVID-19 by Age Groups...")
+        self._get_bar_insight(
+            'current_status',
+            'age_group',
+            dataframe,
+            "Case of Infected COVID-19 by Age Groups")
+
     def _get_pie_insight(self, column_name: str, dataframe:DataFrame, title: str) -> None:
         """
         Get insight of the specific `column_name` in the given `dataframe`
