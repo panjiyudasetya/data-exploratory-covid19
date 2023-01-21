@@ -19,6 +19,7 @@ To run the project, you need to:
 8. I want to see how many patients died due to COVID-19 with underlying medical conditions/risk behaviors.
 9. I want to see the case of COVID-19 based on the person age groups.
 10. I want to see how many patients were hospitalized when COVID-19 occurred based on the person age groups.
+11. I want to see how many patients were admitted to an ICU based on the person age groups.
 
 ## Answers
 1. Here is the comparison between a person that is positive for COVID-19 and a person that probably infected by COVID-19.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Infected%20COVID-19.png"/>
