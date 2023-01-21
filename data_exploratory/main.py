@@ -42,13 +42,23 @@ class DataExploratory:
 
         logger.info(
             "Generating Bar Chart about the Case of Infected COVID-19 " +
-            "based on the person\'s gender..."
+            "based on their gender..."
         )
         self._get_bar_insight(
             'current_status',
             'sex',
             dataframe,
             "Case of Infected COVID-19 by Gender")
+
+        logger.info(
+            "Generating Bar Chart about the Case of Death due to COVID-19 " +
+            "with Underlying Medical Conditions or Risk Behavior..."
+        )
+        self._get_bar_insight(
+            'death_yn',
+            'medcond_yn',
+            dataframe,
+            "Case of Death due to COVID-19\nwith underlying medical conditions or risk behavior")
 
     def _get_pie_insight(self, column_name: str, dataframe:DataFrame, title: str) -> None:
         """
@@ -107,7 +117,8 @@ class DataExploratory:
             makedirs(outputs_path)
 
         # Saves the plot as PNG file
-        plt.savefig(f'{outputs_path}/{title}.png', bbox_inches='tight')
+        filename = title.replace('\n', ' ')
+        plt.savefig(f'{outputs_path}/{filename}.png', bbox_inches='tight')
 
         # Clear the current figure
         plt.close()
