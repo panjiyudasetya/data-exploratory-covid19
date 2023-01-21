@@ -33,3 +33,8 @@ To run the project, you need to:
 9. Here is the case of COVID-19 based on the person age groups.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Infected%20COVID-19%20by%20Age%20Groups.png"/>
 10. Here is the hospitalized patients based on the person age groups.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Hospitalized%20Patient%20by%20Age%20Groups.png"/>
 11. Here is the case of patients admitted to an ICU based on the person age groups.<br/><br/><br/><img src="https://github.com/panjiyudasetya/data-exploratory-covid19/blob/main/outputs/Case%20of%20Patient%20Admitted%20to%20an%20ICU%20by%20Age%20Groups.png"/>
+
+## Conclusion
+- The dataset contains too many "Missing" information for us to make some conclusions.
+- However, if we remove them, the dataset becomes would be significantly reduced to be explored.
+- Hence, all the answers above are built while we consider all the missing parts.
