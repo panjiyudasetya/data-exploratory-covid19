@@ -6,6 +6,7 @@ To run the project, you need to:
 - Ensure `python3` is installed on your computer.
 - Open a terminal and navigate to the directory where this project is located.
 - Activate python virtual environment on your computer. Read [this one](https://docs.python.org/3/library/venv.html#creating-virtual-environments) if you are not familiar with it.
+- Install python dependencies by running this command `$ pip3 install -r requirements.txt`
 - Run command `$ ./run.sh`
 
 ## Questions
